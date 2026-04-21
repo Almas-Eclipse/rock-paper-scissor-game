@@ -13,6 +13,9 @@ const highScoreDisplay = document.querySelector('#high-score');
 const playerImg = document.querySelector('#player-img');
 const computerImg = document.querySelector('#computer-img');
 
+let highScore = localStorage.getItem('highScore') || 0;
+highScoreDisplay.innerText = highScore;
+
 startBtn.addEventListener('click', startGame);
 
 function startGame() {
@@ -129,5 +132,3 @@ function restartGame() {
     homeScreen.style.display = 'block';
 }
     
-let highScore = localStorage.getItem('highScore') || 0;
-highScoreDisplay.innerText = highScore;
