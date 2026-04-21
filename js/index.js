@@ -13,7 +13,7 @@ const highScoreDisplay = document.querySelector('#high-score');
 const playerImg = document.querySelector('#player-img');
 const computerImg = document.querySelector('#computer-img');
 
-let highScore = localStorage.getItem('highScore') || 0;
+let highScore = Number(localStorage.getItem('highScore')) || 0;
 highScoreDisplay.innerText = highScore;
 
 startBtn.addEventListener('click', startGame);
